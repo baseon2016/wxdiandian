@@ -1,0 +1,218 @@
+<loading wx:if="{{!show}}">加载中...</loading>
+
+<view class="page commission" wx:if="{{show}}">
+	<view style="padding-top: {{statusBarHeight+40}}px;background:-webkit-linear-gradient(top,#FF9453,#FF924F,#FFB689);position: relative;">
+		<view class="com_back" style="top: {{statusBarHeight+10}}px;">
+			<view class="com_back_btn">
+				<navigator role="navigation" style="height: 100%;width: 100%;display: block; " url="/pages/transfer/pages/member/index"></navigator>
+			</view>
+			<view style="color: #fff;font-size: 36rpx;margin-left: 35rpx;">
+				分销中心
+			</view>
+		</view>
+
+		<view class="user-info">
+			<view class="fui-list">
+				<view class="fui-list-media">
+					<image src="{{member['avatar']}}"></image>
+				</view>
+				<view class="fui-list-inner">
+					<view class="title" style="font-size: 36rpx;">{{member['nickname']}}</view>
+					<view class="text" style="font-size: 30rpx;">{{set['texts']['up']}}：{{agentname}}</view>
+				</view>
+				<view class="subtitle" style="font-size: 26rpx;">{{levelname}}</view>
+			</view>
+		</view>
+		<view style="padding: 0 24rpx;">
+			<view class="fui-cell-group" wx:if="{{set['hideicode']==0}}">
+				<view class="fui-cell">
+					<view class="fui-cell-text" style="color: #FF9451;font-size: 30rpx;">我的{{set['texts']['icode']}}</view>
+					<view style="color: #FF9451;padding: 2rpx 30rpx;background: #fff;border-radius: 20rpx;font-size: 28rpx;">{{member['id']}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="userblock">
+		<view st>
+			<view class="b_num">{{member['commission_pay']}}</view>
+			<view class="b_tit">{{set['texts']['commission_pay']}}({{set['texts']['yuan']}})</view>
+		</view>
+		<view>
+			<view class="b_num">{{member['commission_ok']}}</view>
+			<view class="b_tit">{{set['texts']['commission_ok']}}({{set['texts']['yuan']}})</view>
+		</view>
+	</view>
+
+
+	<view class="fui-block-group1">
+		<view style="padding: 0 10rpx;">
+			<navigator class="f_a_box" url="./withdraw/index">
+				<view class="icon" style="color: #ff4357;">
+					<i style="font-size: 26rpx;" class="icox icox-qian"></i>
+				</view>
+				<view style="flex: 1;color: #333;font-size: 28rpx;margin-left: 20rpx;">
+					{{set['texts']['commission1']}}
+				</view>
+				<view style="color: #FC914F;font-size: 26rpx;">
+					<text>{{member['commission_total']}}</text>
+					{{set['texts']['yuan']}}
+				</view>
+			</navigator>
+			<navigator class="f_a_box" url="./order/index">
+				<view class="icon" style="color: #9ec9f4;">
+					<i style="font-size: 26rpx;" class="icox icox-dingdan2"></i>
+				</view>
+				<view style="flex: 1;color: #333;font-size: 28rpx;margin-left: 20rpx;">
+					{{set['texts']['order']}}
+				</view>
+				<view style="color: #FC914F;font-size: 26rpx;">
+					<text>{{member['ordercount0']}}</text> 笔
+				</view>
+			</navigator>
+			<navigator class="f_a_box" url="./log/index">
+				<view class="icon" style="color: #ffbe2e;">
+					<i style="font-size: 26rpx;" class="icox icox-tixian1"></i>
+				</view>
+				<view style="flex: 1;color: #333;font-size: 28rpx;margin-left: 20rpx;">
+					{{set['texts']['commission_detail']}}
+				</view>
+				<view style="color: #FC914F;font-size: 26rpx;">
+					<text>{{member['applycount']}}</text> 笔
+				</view>
+			</navigator>
+			<navigator class="f_a_box" style="border: none;" url="./down/index">
+				<view class="icon" style="color: #ff6e02;">
+					<i style="font-size: 26rpx;" class="icox icox-heilongjiangtubiao11"></i>
+				</view>
+				<view style="flex: 1;color: #333;font-size: 28rpx;margin-left: 20rpx;">
+					{{set['texts']['mydown']}}
+				</view>
+				<view style="color: #FC914F;font-size: 26rpx;">
+					<text>{{member['downcount']}}</text> 人
+				</view>
+			</navigator>
+		</view>
+	</view>
+
+
+	<navigator class="fui-cell-group" url="/dividend/pages/index/index" wx:if="{{set.commissionshow==1}}">
+		<view class="fui-cell" style="background: #fff;">
+			<view class="fui-cell-icon">
+				<text class="icox {{set.postercount>0?'icox-zhuyi':'icox-erweima1'}}" style="color: #feb312;"></text>
+			</view>
+			<view class="fui-cell-text">分红中心</view>
+			<view class="fui-cell-remark" style="font-size: 20rpx;"></view>
+		</view>
+	</navigator>
+	<navigator class="fui-cell-group" url="{{set.postercount>0?'./poster/index':'./qrcode/index'}}" wx:if="{{set.closed_qrcode==0||set.postercount>0}}">
+		<view class="fui-cell" style="background: #fff;">
+			<view class="fui-cell-icon">
+				<text class="icox {{set.postercount>0?'icox-zhuyi':'icox-erweima1'}}" style="color: #feb312;"></text>
+			</view>
+			<view class="fui-cell-text">{{set.postercount>0?'邀请您的好友':'推广二维码'}}</view>
+			<view class="fui-cell-remark" style="font-size: 20rpx;"></view>
+		</view>
+	</navigator>
+</view>
+
+
+
+
+<!-- <view class="page commission" wx:if="{{show}}">
+    <view class="user-info">
+        <view class="fui-list">
+            <view class="fui-list-media">
+                <image src="{{member['avatar']}}"></image>
+            </view>
+            <view class="fui-list-inner">
+                <view class="title">{{member['nickname']}}</view>
+                <view class="text">{{set['texts']['up']}}：{{agentname}}</view>
+                <view class="subtitle">{{levelname}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="fui-cell-group" wx:if="{{set['hideicode']==0}}">
+        <view class="fui-cell">
+            <view class="fui-cell-icon">
+                <text class="icox icox-yaoqingma" style="color: #feb312;"></text>
+            </view>
+            <view class="fui-cell-text">我的{{set['texts']['icode']}}：{{member['id']}}</view>
+        </view>
+    </view>
+    <view class="userblock">
+        <view class="line total">
+            <view class="num">{{member['commission_pay']}}</view>
+            <view class="title">{{set['texts']['commission_pay']}}({{set['texts']['yuan']}})</view>
+        </view>
+        <view class="line able">
+            <view class="text">
+                <view class="num">{{member['commission_ok']}}</view>
+                <view class="title">{{set['texts']['commission_ok']}}({{set['texts']['yuan']}})</view>
+            </view>
+            <navigator class="btn btn-warning pull-right {{member['commission_ok']==0?' disabled':''}}" hoverClass="none" openType="navigate" url="{{member['commission_ok']==0?'':'./withdraw/index'}}">{{set['texts']['commission']}}{{set['texts']['withdraw']}}</navigator>
+        </view>
+    </view>
+    <view class="fui-block-group">
+        <navigator class="fui-block-child" url="./withdraw/index">
+            <view class="icon" style="color: #ff4357;">
+                <i class="icox icox-qian"></i>
+            </view>
+            <view class="text">
+                <view class="title">{{set['texts']['commission1']}}</view>
+                <text>{{member['commission_total']}}</text>
+                {{set['texts']['yuan']}}
+            </view>
+        </navigator>
+        <navigator class="fui-block-child" url="./order/index">
+            <view class="icon" style="color: #9ec9f4;">
+                <i class="icox icox-dingdan2"></i>
+            </view>
+            <view class="text">
+                <view class="title">{{set['texts']['order']}}</view>
+                <text>{{member['ordercount0']}}</text>
+                笔
+            </view>
+        </navigator>
+        <navigator class="fui-block-child" url="./log/index">
+            <view class="icon" style="color: #ffbe2e;">
+                <i class="icox icox-tixian1"></i>
+            </view>
+            <view class="text">
+                <view class="title">{{set['texts']['commission_detail']}}</view>
+                <text>{{member['applycount']}}</text>
+                笔
+            </view>
+        </navigator>
+        <navigator class="fui-block-child" url="./down/index">
+            <view class="icon" style="color: #ff6e02;">
+                <i class="icox icox-heilongjiangtubiao11"></i>
+            </view>
+            <view class="text">
+                <view class="title">{{set['texts']['mydown']}}</view>
+                <text>{{member['downcount']}}</text>
+                人
+            </view>
+        </navigator>
+    </view>
+    <navigator class="fui-cell-group" url="/dividend/pages/index/index" wx:if="{{set.commissionshow==1}}">
+        <view class="fui-cell">
+            <view class="fui-cell-icon">
+                <text class="icox {{set.postercount>0?'icox-zhuyi':'icox-erweima1'}}" style="color: #feb312;"></text>
+            </view>
+            <view class="fui-cell-text">分红中心</view>
+            <view class="fui-cell-remark" style="font-size: 20rpx;"></view>
+        </view>
+    </navigator>
+    <navigator class="fui-cell-group" url="{{set.postercount>0?'./poster/index':'./qrcode/index'}}" wx:if="{{set.closed_qrcode==0||set.postercount>0}}">
+        <view class="fui-cell">
+            <view class="fui-cell-icon">
+                <text class="icox {{set.postercount>0?'icox-zhuyi':'icox-erweima1'}}" style="color: #feb312;"></text>
+            </view>
+            <view class="fui-cell-text">{{set.postercount>0?'邀请您的好友':'推广二维码'}}</view>
+            <view class="fui-cell-remark" style="font-size: 20rpx;"></view>
+        </view>
+    </navigator>
+</view> -->
+<!-- <navigator class="commission-shouye" openType="switchTab" url="/pages/index/index">
+    <text class="icox icox-shouye"></text>
+</navigator> -->

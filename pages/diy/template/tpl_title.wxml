@@ -1,0 +1,5 @@
+<view bindtap="navigate" class="fui-title diypage-title" data-url="{{diyitem.params.link}}" style="background:{{diyitem.style.background}};color:{{diyitem.style.color}};padding:{{diyitem.style.paddingtop}}rpx {{diyitem.style.paddingleft}}rpx;font-size:{{diyitem.style.fontsize}}rpx;text-align:{{diyitem.style.textalign}}">
+	<text class="icox {{diyitem.params.icon}}"></text>
+	<text style="width: 10rpx;height: 28rpx;background: -webkit-linear-gradient(top,#FFC19C,#FF924F,#FF9452);display: inline-block;vertical-align: middle;"></text>
+	{{diyitem.params.title}}
+</view>

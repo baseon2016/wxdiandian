@@ -1,0 +1,77 @@
+.fui-list-inner .subtitle {
+    font-size: 28rpx;overflow : hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;word-break: break-all;
+}
+
+.fui-list-angle {
+    font-size: 26rpx;
+    color: #666;
+}
+
+.fui-list-media image {
+    width: 104rpx;
+    height: 104rpx;
+}
+
+.fui-list-inner {
+    /* height: 160rpx; */
+    /* display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox; */
+    /* display: flex; */
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.fui-list-group-title::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 20rpx;
+    height: 0;
+    border-top: 2rpx solid #ebebeb;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+    left: 20rpx;
+}
+
+.btns {
+    height: 100%;
+}
+
+.btn {
+    border-radius: 0;
+    height: 100%;
+    line-height: 90rpx;
+    font-size: 28rpx;
+    color: #fff;
+    margin: 0;
+    margin-left: 2rpx;
+    width: 160rpx;
+    border: 0;
+}
+
+.fui-footer .tool {
+    padding-right: 0;
+}
+.fui-list {margin-bottom: 20rpx; display: inline-block; background: #fff;width: 87%;
+}
+.fui-list-title{
+    text-align: justify;
+    text-align-last:justify; display: flex;
+    flex-flow:row;
+}   
+.fui-list-bg{ display: flex; }
+.fui-list-title view{ display: flex;align-items: center; padding-bottom: 30rpx;}
+.fui-list-tl{ width: 50%;
+    font-size: 30rpx;
+    font-family: PingFangSC Regular, PingFangSC Regular-Regular;
+    font-weight: bold;
+    text-align: left;
+    color: #333333;  white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    }
+    .fui-list-tl .fui-list-tlimg{ width: 40rpx !important; height: 27rpx !important; margin-right: 10rpx;}  
+.fui-list-tr{font-size: 20rpx; color: #808080; width: 50%;justify-content:flex-end;}
