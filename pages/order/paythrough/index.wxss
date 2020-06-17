@@ -1,0 +1,187 @@
+/* [
+  {
+    "baseInfo": {
+      "id": "84BFDCA3-200D-4BF6-9395-092D9D438C34",
+      "name": "点点联盟logo",
+      "x": "327pt",
+      "y": "228pt",
+      "width": "96pt",
+      "height": "86pt",
+      "opacity": 1,
+      "radius": null,
+      "defaultInfo": {
+        "width": 96,
+        "height": 86
+      },
+      "fill": [
+        {
+          "type": "normal",
+          "r": 255,
+          "g": 146,
+          "b": 79,
+          "a": 1
+        }
+      ],
+      "marked": false
+    },
+    "codeInfo": {
+      "codes": [
+        {
+          "name": "width",
+          "value": "96pt;"
+        },
+        {
+          "name": "height",
+          "value": "86pt;"
+        },
+        {
+          "name": "background",
+          "value": "#ff924f;"
+        }
+      ]
+    },
+    "remarkInfo": {
+      "remarks": ""
+    }
+  }
+] */
+.head{
+	display: flex;
+	flex-direction: column;
+	height: 486rpx;
+	width: 100%;
+	text-align: center;
+	padding-top: 96rpx;
+	padding-bottom: 72rpx;
+}
+.head-img{
+	display: flex;
+	flex-direction: column;
+	align-items:center
+}
+.logo{
+	width: 96rpx;
+	height: 86rpx;
+	display: block;
+	align-self: center;
+}
+.tip{
+	width: 136rpx;
+	height: 48rpx;
+	font-size: 34rpx;
+	font-family: PingFangSC, PingFangSC-Medium;
+	font-weight: 500;
+	text-align: center;
+	color: #ff924f;
+	line-height: 48rpx;
+	margin-top: 16rpx;
+}
+.head-text{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 73rpx;
+}
+.head-text .title{
+	width: 280rpx;
+	height: 29rpx;
+	font-size: 40rpx;
+	font-family: PingFangSC, PingFangSC-Medium;
+	font-weight: 500;
+	text-align: center;
+	color: #333333;
+	line-height: 29rpx;
+}
+.head-text .sub-text{
+	width: 210rpx;
+	height: 42rpx;
+	font-size: 30rpx;
+	font-family: PingFangSC, PingFangSC-Regular;
+	font-weight: 400;
+	text-align: center;
+	color: #333333;
+	line-height: 42rpx;
+	margin-top: 24rpx;
+}
+.column{
+	width: 90%;
+	background: #ffffff;
+	border-radius: 16rpx;
+	margin: 0 auto;
+	padding: 6rpx 22rpx;
+}
+.row{
+	padding: 21rpx 0;
+	position:relative;
+	font-size: 30rpx;
+	font-family: PingFangSC, PingFangSC-Medium;
+	font-weight: 500;
+	text-align: right;
+	color: #cccccc;
+	line-height: 42rpx;
+}
+.row-title{
+	position: absolute;
+	left: 0;
+	font-size: 30rpx;
+	font-family: PingFangSC, PingFangSC-Medium;
+	font-weight: 500;
+	text-align: left;
+	color: #333333;
+	line-height: 42rpx;
+}
+.btn-navbar{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	height: 122rpx;
+	background: #fff;
+	box-shadow: 0 0 4rpx rgba(0,0,0,0.1);
+	z-index: 999;
+	padding: 0 12rpx;
+	display: flex;
+	justify-content: space-around;
+}
+.btn-navbar .nav-item{
+	position: relative;
+	display: table-cell;
+	height: 100rpx;
+	text-align: center;
+	vertical-align: middle;
+	width: 50%;
+	padding-top: 24rpx;
+}
+.btn-navbar text.shop{
+	display: block;
+	width: 90%;
+	height: 74rpx;
+	background: #ff9350;
+	border-radius: 40rpx;
+	font-size: 30rpx;
+	font-family: PingFangSC, PingFangSC-Medium;
+	font-weight: 500;
+	text-align: center;
+	color: #ffffff;
+	line-height: 74rpx;
+}
+.btn-navbar text.home{
+	display: block;
+	width: 90%;
+	height: 74rpx;
+	background: #ffffff;
+	border:1px solid #ff9350;
+	border-radius: 40rpx;
+	font-size: 30rpx;
+	font-family: PingFangSC, PingFangSC-Medium;
+	font-weight: 500;
+	text-align: center;
+	color: #ff9350;
+	line-height: 74rpx;
+	
+}
+.mg-t-20{
+	margin-top: 20rpx;
+}
+.border-b{
+	border-bottom: 1rpx solid #d8d8d8;
+}
