@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/order/confirm/index",
+    "pages/order/paythrough/index",
     "pages/index/index",
     "pages/shop/caregory/index",
     "pages/custom/index",
@@ -162,9 +164,7 @@
     },
     {
       "root": "seckill",
-      "pages": [
-        "pages/index/index"
-      ]
+      "pages": ["pages/index/index"]
     },
     {
       "root": "dividend",
@@ -202,7 +202,7 @@
   ],
   "permission": {
     "scope.userLocation": {
-      "desc": "你的位置信息将用于小程序为您推荐附近商家" 
+      "desc": "你的位置信息将用于小程序为您推荐附近商家"
     }
   },
   "navigateToMiniProgramAppIdList": [],

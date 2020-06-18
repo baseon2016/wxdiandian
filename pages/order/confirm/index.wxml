@@ -1,0 +1,56 @@
+<loading wx:if="{{!show}}">加载中...</loading>
+<view class="page footer" wx:if="{{show}}">
+		<view class="head">
+				<view class="column">
+						<view class="title border-b" style="display:flex">
+								<image class="head-avatar" src="{{avatar}}" />
+								<text class="shopname">{{shopName}}</text>
+						</view>
+						<view class="content">
+								<image class="shop-cover" src="{{goodsCover}}" />
+								<view class="goods-info">
+										<view class="goods-title">{{goodsTitle}}</view>
+										<view class="goods-subinfo" style="margin-top:13rpx">{{goodsSubtitle}}</view>
+										<view class="goods-subinfo" style="margin-top:13rpx">数量:{{qty}}个</view>
+								</view>
+								<text class="bill">￥{{bill}}</text>
+						</view>
+				</view>
+		</view>
+		<view class="body">
+				<view class="column">
+						<view class="row border-b">
+								<text class="row-title">姓名</text>
+								{{buyer}}
+						</view>
+						<view class="row">
+								<text class="row-title">联系方式</text>
+								{{phone}}
+						</view>
+				</view>
+				<view class="column mg-t-20">
+						<view class="row border-b">
+								<text class="row-title">实付</text>
+								￥{{payment}}
+						</view>
+						<view class="row border-b">
+								<text class="row-title">优惠券优惠</text>
+								-￥{{discount}}
+						</view>
+						<view class="comment">
+								<text class="comment-title">备注留言</text>
+								<textarea class="comment-content" data-name="comment" bindinput="inputComment" value="{{comment}}" />
+						</view>
+				</view>
+		</view>
+		<view class="btn-navbar">
+				<view class="info">
+						<view>
+								<text class="info-bill">￥{{bill}}</text>
+								<text class="benefit">预估收益{{benefit}}元</text>
+						</view>
+						<view class="original-bill">门市原价￥{{originalBill}}</view>
+				</view>
+				<button class="submit mini-btn" type="primary" bindtap='pay'>立即支付</button>
+		</view>
+</view>

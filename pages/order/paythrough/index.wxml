@@ -1,42 +1,40 @@
 <loading wx:if="{{!show}}">加载中...</loading>
 <view class="page footer" wx:if="{{show}}">
-    <view class="head">
-		<view class="head-img">
-			<image class="logo" src="/static/images/paythrough/logo.png"></image>
-			<text class="tip">购买成功</text>
+		<view class="head">
+				<view class="head-img">
+						<image class="logo" src="/static/images/paythrough/logo.png"></image>
+						<text class="tip">购买成功</text>
+				</view>
+				<view class="head-text">
+						<text class="title">{{paythroughData.title}}</text>
+						<text class="sub-text">{{paythroughData.title}}</text>
+				</view>
 		</view>
-		<view class="head-text">
-			<text class="title">{{paythroughData.title}}</text>
-			<text class="sub-text">{{paythroughData.title}}</text>
+		<view class="body">
+				<view class="column">
+						<view class="row border-b">
+								<text class="row-title">姓名</text>
+								{{paythroughData.buyer}}
+						</view>
+						<view class="row">
+								<text class="row-title">联系方式</text>
+								{{paythroughData.phone}}
+						</view>
+				</view>
+				<view class="column mg-t-20">
+						<view class="row">
+								<text class="row-title">实付金额</text>
+								￥{{paythroughData.payment}}
+						</view>
+				</view>
 		</view>
-	</view>
-	<view class="body">
-		<view class="column">
-			<view class="row border-b">
-				<text class="row-title">姓名</text>
-				{{paythroughData.buyer}}
-			</view>
-			<view class="row">
-				<text class="row-title">联系方式</text>
-				{{paythroughData.phone}}
-			</view>
+		<!-- <include src="/pages/common/menu.wxml"></include> -->
+		<view class="btn-navbar">
+				<navigator class="nav-item" openType="reLaunch" url="/pages/shop/notice/detail/detail">
+						<text class="shop">店铺详情</text>
+				</navigator>
+				<navigator class="nav-item" openType="reLaunch" url="/pages/index/index">
+						<text class="home">返回首页</text>
+				</navigator>
 		</view>
-		<view class="column mg-t-20">
-			<view class="row">
-				<text class="row-title">实付金额</text>
-				￥{{paythroughData.payment}}
-			</view>
-		</view>
-	</view>
-	<!-- <include src="/pages/common/menu.wxml"></include> -->
-	<view class="btn-navbar">
-		<navigator class="nav-item" openType="reLaunch" url="/pages/order/paythrough">
-			
-			<text class="shop">店铺详情</text>
-		</navigator>
-		<navigator class="nav-item" openType="reLaunch" url="/pages/order/paythrough">
-			
-			<text class="home">返回首页</text>
-		</navigator>
-	</view>
 </view>
