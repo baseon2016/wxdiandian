@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/order/confirm/index",
+	  "pages/order/detail-new/index",
     "pages/order/paythrough/index",
+    "pages/order/confirm/index",
     "pages/index/index",
     "pages/shop/caregory/index",
     "pages/custom/index",

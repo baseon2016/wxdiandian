@@ -1,0 +1,87 @@
+<loading wx:if="{{!show}}">加载中...</loading>
+<view class="page footer" wx:if="{{show}}">
+	<view class="body">
+		<view class="title">待使用</view>
+		<view class="column">
+			<view class="row border-b">
+				<text class="row-title">姓名</text>
+				{{buyer}}
+			</view>
+			<view class="row">
+				<text class="row-title">联系方式</text>
+				{{phone}}
+			</view>
+		</view>
+		<view class="column mg-t-24">
+			<view class="content">
+				<image class="shop-cover" src="{{goodsCover}}" />
+				<view class="goods-info">
+					<view class="goods-title">{{goodsTitle}}</view>
+					<view class="goods-subinfo" style="margin-top:13rpx">{{goodsSubtitle}}</view>
+					<view class="goods-subinfo" style="margin-top:13rpx">数量:{{qty}}个</view>
+				</view>
+				<text class="bill">￥{{bill}}</text>
+			</view>
+		</view>
+		<view class="column mg-t-24">
+			<view class="row">
+				<text class="row-title">核销码</text>
+				>
+			</view>
+		</view>
+		<view class="column mg-t-24">
+			<view class="column-title border-b">
+				<text>适用门店</text>
+			</view>
+			<view class="content">
+				<image class="shop-cover" src="{{shopCover}}" />
+				<view class="shop-info">
+					<view class="shop-title">{{shopTitle}}</view>
+					<view class="rating">
+						<view
+						    class='stars'
+						    wx:for='{{[1,2,3,4,5]}}'
+						    wx:key="index"
+						    wx:for-item='i'
+						>
+						    <image
+						      src='/static/images/tempImg/star.png'
+						      wx:if="{{star >= i }}"
+						    ></image>
+						   
+						    <image
+						      src='/static/images/tempImg/star.png'
+						      wx:else
+						    ></image>
+						</view>
+						<text>{{star}}分</text>
+					</view>
+					<view class="shop-subinfo" style="margin-top:11rpx">
+						<image src="/static/images/tempImg/location.png"></image>
+						<text style="margin-left:9rpx;">{{location}}</text>
+						<view class="divider">|</view>
+						<text>{{shopSubtitle}}</text>
+					</view>
+				</view>
+				<image class="tel" src="/static/images/tempImg/phone.png"></image>
+			</view>
+		</view>
+		<view class="column mg-t-24">
+			<view class="row border-b">
+				<text class="row-title">商品小计</text>
+				￥{{payment}}
+			</view>
+			<view class="row border-b">
+				<text class="row-title">优惠券优惠</text>
+				-￥{{discount}}
+			</view><view class="row border-b">
+				<text class="row-title">实付</text>
+				￥{{paybill}}
+			</view>
+			<view class="interact">
+				<view class="interact-btn">评价</view>
+				<view class="interact-btn">再来一单</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -2,7 +2,7 @@
 <view class="page footer" wx:if="{{show}}">
 		<view class="head">
 				<view class="head-img">
-						<image class="logo" src="/static/images/paythrough/logo.png"></image>
+						<image class="logo" src="/static/images/tempImg/logo.png"></image>
 						<text class="tip">购买成功</text>
 				</view>
 				<view class="head-text">
